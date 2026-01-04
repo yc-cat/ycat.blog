@@ -1,4 +1,4 @@
-baseURL = "https://yc-cat.github.io/ycat.blog"
+baseURL = "http://localhost:1313/"
 languageCode = "zh-cn"
 title = "ycat猫窝"
 theme = "paper"
@@ -12,6 +12,11 @@ theme = "paper"
 
   # 社交链接（有就写，没有可以先删）
   github = "your_github_username"
+
+  # 首页不要显示任何文章列表
+  mainSections = []
+
+  customCSS = ["css/home.css"]
 
 
 [menu]
