@@ -1,4 +1,4 @@
-baseURL = "https://github.com/yc-cat/yc-cat.github.io/ycat.blog"
+baseURL = "https://yc-cat.github.io/ycat.blog"
 languageCode = "zh-cn"
 title = "ycat猫窝"
 theme = "paper"
