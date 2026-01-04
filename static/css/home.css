@@ -1,0 +1,65 @@
+/* 首页卡片容器 */
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 1.6em;
+  max-width: 520px;
+  margin: 3.5em auto 0;
+  padding: 0 1em;
+}
+
+/* 单个卡片 */
+.home-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  aspect-ratio: 1 / 1;        /* 正方形 */
+  border-radius: 18px;        /* 圆角 */
+  border: 1.5px solid #ccc;
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.home-card:active {
+  transform: scale(0.97);
+}
+
+/* 图标 */
+.home-card .icon {
+  font-size: 2.4rem;
+  margin-bottom: 0.5em;
+}
+
+/* 文字 */
+.home-card .label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+/* 悬停效果 */
+.home-card:hover {
+  transform: translateY(-4px);
+  background: #f5f5f5;
+}
+
+/* 手机：一行一个 */
+@media (max-width: 640px) {
+  .home-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 深色模式 */
+@media (prefers-color-scheme: dark) {
+  .home-card {
+    border-color: #444;
+  }
+
+  .home-card:hover {
+    background: #222;
+  }
+}

@@ -1,0 +1,35 @@
+
+
+
+/* 只作用于小说章节页面 */
+body {
+  --novel-max-width: 760px;
+}
+
+/* 正文阅读宽度 */
+main {
+  max-width: var(--novel-max-width);
+}
+
+/* 小说正文 */
+article {
+  letter-spacing: 0.02em;
+}
+
+/* 段落间距 */
+article p {
+  margin: 1.2em 0;
+}
+
+/* 标题 */
+article h2,
+article h3 {
+  margin-top: 2.2em;
+}
+
+/* 上下章导航 */
+nav {
+  margin: 3em 0;
+  font-size: 0.95rem;
+}
+

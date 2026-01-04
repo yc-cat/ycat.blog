@@ -1,0 +1,39 @@
+{{ define "main" }}
+<main class="novel-list">
+
+  <h1>{{ .Title }}</h1>
+
+  {{ if .Content }}
+    <div class="novel-intro">
+      {{ .Content }}
+    </div>
+  {{ end }}
+
+  {{/* 情况 1：小说总页（/novel/） */}}
+  {{ if .Sections }}
+    <ul class="story-list">
+      {{ range .Sections }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+  {{/* 情况 2：单本小说页（/novel/the-first-story/） */}}
+  {{ if .RegularPages }}
+    <ul class="chapter-list">
+      {{ range .RegularPages.ByWeight }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+</main>
+{{ end }}

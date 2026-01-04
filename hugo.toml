@@ -1,8 +1,33 @@
-baseURL = "http://localhost/"
+baseURL = "https://github.com/yc-cat/yc-cat.github.io/ycat.blog"
 languageCode = "zh-cn"
-title = "ycat.blog"
+title = "ycat猫窝"
 theme = "paper"
 
 [params]
-  color = "light"
+  color = "linen"
+
+  # 首页显示（没有显示了，用自定义主页home.css）
+  name = "YCAT"
+  bio = "记录技术 · 思考 · 生活"
+
+  # 社交链接（有就写，没有可以先删）
   github = "your_github_username"
+
+
+[menu]
+
+  [[menu.main]]
+    name = "Novel"
+    url = "/novel/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Share"
+    url = "/share/"
+    weight = 20
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

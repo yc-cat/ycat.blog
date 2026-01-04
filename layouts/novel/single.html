@@ -1,0 +1,33 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/css/novel.css">
+{{ end }}
+
+{{ define "main" }}
+
+<article class="chapter">
+
+  <h1>{{ .Title }}</h1>
+
+  <div class="chapter-content">
+    {{ .Content }}
+  </div>
+
+  <hr>
+
+  <nav class="chapter-nav">
+
+    {{ with .NextInSection }}
+      <a class="prev" href="{{ .RelPermalink }}">⬅️ 上一章</a>
+    {{ end }}
+
+    <a class="toc" href="{{ .Parent.RelPermalink }}">📚 目录</a>
+
+    {{ with .PrevInSection }}
+      <a class="next" href="{{ .RelPermalink }}">下一章 ➡️</a>
+    {{ end }}
+
+  </nav>
+
+</article>
+
+{{ end }}
