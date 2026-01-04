@@ -1,0 +1,8 @@
+baseURL = "http://localhost/"
+languageCode = "zh-cn"
+title = "ycat.blog"
+theme = "paper"
+
+[params]
+  color = "light"
+  github = "your_github_username"
